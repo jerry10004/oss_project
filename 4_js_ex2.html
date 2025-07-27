@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<form name="loginForm" onsubmit="return check();">
+    <input type="text" name="username">
+    <input type="password" name="pw" id="pw">
+    <button type="submit">로그인</button>
+</form>
+
+<script>
+    function check(){
+        const form = document.forms["loginForm"];
+        const username = form["username"].value;
+        const pw1 = form.pw.value;
+        const pw2 = document.querySelector("#pw").value;
+        console.log("ID:", username, "PW:", pw1, "PW:", pw2);
+        return false;
+    }        
+</script>
+</body>
+
+</html>
